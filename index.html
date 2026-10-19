@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="hr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOMBINAT AUTO-INDUSTRIJE >>SLOBODA SPLIT<< d.o.o. | S-100 Galeb</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Space Grotesk / Rubik Mono One za retro industrijski štih -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome za ikone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sloboda-red': '#C82323',
+                        'sloboda-red-dark': '#9B1B1B',
+                        'sloboda-blue': '#1E40AF',
+                        'sloboda-blue-light': '#3B82F6',
+                        'paper-patina': '#F4EFE6',
+                        'paper-card': '#E8E1D5',
+                        'industrial-dark': '#1C1917',
+                        'industrial-gray': '#292524',
+                        'brass': '#D97706',
+                        'brass-light': '#F59E0B',
+                        'brass-dark': '#B45309'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Oswald', 'sans-serif'],
+                        tech: ['Chakra Petch', 'sans-serif'],
+                        mono: ['Courier Prime', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F4EFE6;
+            color: #1C1917;
+            background-image: radial-gradient(#d5ccc0 0.75px, transparent 0.75px);
+            background-size: 16px 16px;
+        }
+
+        .border-industrial {
+            border: 2px solid #1C1917;
+        }
+
+        .shadow-retro {
+            box-shadow: 4px 4px 0px #1C1917;
+        }
+
+        .shadow-retro-lg {
+            box-shadow: 8px 8px 0px #1C1917;
+        }
+
+        .shadow-retro-red {
+            box-shadow: 6px 6px 0px #C82323;
+        }
+
+        .badge-stamp {
+            border: 3px dashed #C82323;
+            transform: rotate(-3deg);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #E8E1D5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1C1917;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-sloboda-red selection:text-white">
+
+    <!-- TOP INDUSTRIAL ANNOUNCEMENT BAR -->
+    <div class="bg-industrial-dark text-paper-patina py-2 px-4 text-xs font-mono uppercase tracking-widest border-b-2 border-sloboda-red flex justify-between items-center overflow-x-auto whitespace-nowrap">
+        <div class="flex items-center space-x-4">
+            <span class="inline-block w-2 h-2 rounded-full bg-sloboda-red animate-pulse"></span>
+            <span>OSNIVAČKA SERIJA S-100 GALEB: 500 PRIMJERAKA U PROIZVODNJI</span>
+        </div>
+        <div class="hidden md:flex space-x-6">
+            <span>TVORNICA SPLIT >> SLOBODA D.O.O.</span>
+            <span class="text-brass-light"><i class="fa-solid fa-screwdriver-wrench mr-1"></i> 100% ANALOGNA MEHANIKA</span>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-paper-patina/95 backdrop-blur border-b-2 border-industrial">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+            <!-- LOGO WITH CLEAN TRANSPARENT LOGO.PNG (NO SQUARE / BACKGROUND) -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <img src="logo.png" alt="Sloboda Split Logo" class="h-10 w-auto object-contain transition-transform group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/100x100/transparent/1C1917?text=SLOBODA';">
+                <div>
+                    <div class="font-heading text-lg sm:text-xl font-bold tracking-wider leading-none text-industrial-dark">
+                        KOMBINAT >>SLOBODA SPLIT<<
+                    </div>
+                    <div class="text-[10px] font-mono text-sloboda-red uppercase tracking-widest font-bold">
+                        Auto-Industrija d.o.o.
+                    </div>
+                </div>
+            </a>
+
+            <!-- DESKTOP NAV -->
+            <nav class="hidden md:flex items-center space-x-6 font-heading font-medium tracking-wide">
+                <a href="#manifest" class="hover:text-sloboda-red transition-colors">MANIFEST</a>
+                <a href="#galeb-s100" class="hover:text-sloboda-red transition-colors">GALEB S-100</a>
+                <a href="#kampanja" class="hover:text-sloboda-red transition-colors">KAMPANJA</a>
+                <a href="#konfigurator" class="hover:text-sloboda-red transition-colors">KONFIGURATOR</a>
+                <a href="#specifikacije" class="hover:text-sloboda-red transition-colors">TEHNIČKE SPEC.</a>
+            </nav>
+
+            <!-- CTA BUTTON -->
+            <div class="flex items-center space-x-3">
+                <a href="#konfigurator" class="bg-sloboda-red hover:bg-sloboda-red-dark text-white font-heading px-4 py-2 text-sm sm:text-base border-2 border-industrial shadow-retro transition-all active:translate-x-0.5 active:translate-y-0.5 flex items-center gap-2">
+                    <i class="fa-solid fa-key"></i>
+                    <span>REZERVIRAJ (300 €)</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative py-12 lg:py-20 overflow-hidden border-b-2 border-industrial">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- HERO TEXT -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-sloboda-red/10 border border-sloboda-red text-sloboda-red px-3 py-1 font-mono text-xs font-bold uppercase rounded-none">
+                        <i class="fa-solid fa-certificate"></i>
+                        <span>Osnivačka Serija • Predbilježbe Otvorene</span>
+                    </div>
+
+                    <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold text-industrial-dark leading-none uppercase">
+                        SLOBODA ĆE DOĆI <br>
+                        <span class="text-sloboda-red underline decoration-industrial decoration-4">SA NJIM.</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl font-mono text-industrial-gray leading-relaxed max-w-2xl">
+                        Bez ekrana. Bez pištanja. Bez senzora koji vas nadziru. 
+                        Predstavljamo <strong class="text-industrial-dark">S-100 Galeb</strong> — stvoren u Splitu za sve koji žele čistu mehaniku, radničku pouzdanost i slobodu otvorene ceste.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#konfigurator" class="bg-sloboda-red hover:bg-sloboda-red-dark text-white font-heading text-lg px-8 py-4 border-2 border-industrial shadow-retro-lg transition-all text-center flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-car"></i>
+                            <span>KONFIGURIRAJ SVOJ GALEB</span>
+                        </a>
+                        <a href="#manifest" class="bg-paper-card hover:bg-white text-industrial-dark font-heading text-lg px-6 py-4 border-2 border-industrial shadow-retro transition-all text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-book-open"></i>
+                            <span>PROČITAJ MANIFEST</span>
+                        </a>
+                    </div>
+
+                    <!-- QUICK PRICE HIGHLIGHT -->
+                    <div class="pt-6 border-t border-industrial/20 flex flex-wrap gap-8 items-center">
+                        <div>
+                            <div class="text-xs font-mono text-gray-600 uppercase">Glavna Cijena Model S-100</div>
+                            <div class="font-heading text-3xl font-bold text-sloboda-red">12.900 €</div>
+                        </div>
+                        <div class="h-8 w-px bg-industrial/20 hidden sm:block"></div>
+                        <div>
+                            <div class="text-xs font-mono text-gray-600 uppercase">Radničko Financiranje</div>
+                            <div class="font-heading text-3xl font-bold text-industrial-dark">od 99 € <span class="text-sm font-sans font-normal text-gray-600">/ mj</span></div>
+                        </div>
+                        <div class="h-8 w-px bg-industrial/20 hidden sm:block"></div>
+                        <div>
+                            <div class="text-xs font-mono text-gray-600 uppercase">Povratna Kapara</div>
+                            <div class="font-heading text-3xl font-bold text-brass-dark">300 €</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HERO VEHICLE CARD DISPLAY -->
+                <div class="lg:col-span-5">
+                    <div class="bg-paper-card border-2 border-industrial shadow-retro-lg p-6 relative">
+                        <!-- STAMP BADGE -->
+                        <div class="absolute -top-4 -right-4 bg-sloboda-red text-white p-3 border-2 border-industrial font-heading text-xs uppercase tracking-widest text-center shadow-retro z-20 badge-stamp">
+                            <div class="font-bold text-sm">NO. 001 - 500</div>
+                            <div>LIMITED EDITION</div>
+                        </div>
+
+                        <!-- CAR PREVIEW IMAGE CONTAINER -->
+                        <div class="relative bg-gradient-to-b from-sky-200 to-amber-100 border-2 border-industrial h-64 sm:h-80 flex items-center justify-center overflow-hidden mb-4 group">
+                            <!-- Dynamic Car Body Overlay -->
+                            <div id="hero-car-graphic" class="relative w-full h-full flex items-center justify-center p-4 transition-all duration-300">
+                                <!-- SVG Retro Hatchback Graphic -->
+                                <svg class="w-full h-auto max-h-56 filter drop-shadow-lg" viewBox="0 0 500 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Sea / Beach Waves Background Line -->
+                                    <path d="M0 220 Q 125 210, 250 220 T 500 220 L 500 280 L 0 280 Z" fill="#93C5FD" opacity="0.4"/>
+                                    
+                                    <!-- Wheels -->
+                                    <circle cx="130" cy="210" r="38" fill="#1C1917"/>
+                                    <circle cx="130" cy="210" r="22" fill="#D1D5DB" stroke="#1C1917" stroke-width="4"/>
+                                    <circle cx="130" cy="210" r="8" fill="#1C1917"/>
+                                    
+                                    <circle cx="370" cy="210" r="38" fill="#1C1917"/>
+                                    <circle cx="370" cy="210" r="22" fill="#D1D5DB" stroke="#1C1917" stroke-width="4"/>
+                                    <circle cx="370" cy="210" r="8" fill="#1C1917"/>
+
+                                    <!-- Car Main Body -->
+                                    <path id="hero-car-body" d="M 60 170 L 80 140 L 160 135 L 220 85 L 360 85 L 430 135 L 450 170 L 455 200 L 50 200 Z" fill="#C82323" stroke="#1C1917" stroke-width="6" stroke-linejoin="round"/>
+                                    
+                                    <!-- Windows -->
+                                    <path d="M 170 135 L 225 93 L 285 93 L 285 135 Z" fill="#E0F2FE" stroke="#1C1917" stroke-width="4"/>
+                                    <path d="M 295 135 L 295 93 L 355 93 L 415 135 Z" fill="#E0F2FE" stroke="#1C1917" stroke-width="4"/>
+
+                                    <!-- Chrome Bumpers & Details -->
+                                    <rect x="40" y="180" width="30" height="12" rx="4" fill="#E5E7EB" stroke="#1C1917" stroke-width="3"/>
+                                    <rect x="435" y="180" width="35" height="12" rx="4" fill="#E5E7EB" stroke="#1C1917" stroke-width="3"/>
+                                    <circle cx="440" cy="155" r="12" fill="#FDE047" stroke="#1C1917" stroke-width="3"/> <!-- Headlight -->
+                                    <rect x="275" y="150" width="20" height="8" rx="2" fill="#1C1917"/> <!-- Door handle -->
+                                    <path d="M 65 170 L 445 170" stroke="#1C1917" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="absolute bottom-2 left-2 bg-industrial-dark text-paper-patina text-[10px] font-mono px-2 py-0.5 uppercase">
+                                Vizualizacija Model S-100 Galeb
+                            </div>
+                        </div>
+
+                        <!-- SPEC HIGHLIGHTS GRID -->
+                        <div class="grid grid-cols-2 gap-2 text-xs font-mono">
+                            <div class="bg-paper-patina p-2 border border-industrial">
+                                <span class="text-gray-500 block">MOTOR:</span>
+                                <strong class="text-industrial-dark font-bold">1.1L 4-Cilindra (55 KS)</strong>
+                            </div>
+                            <div class="bg-paper-patina p-2 border border-industrial">
+                                <span class="text-gray-500 block">MJENJAČ:</span>
+                                <strong class="text-industrial-dark font-bold">5-Stupanjski Ručni</strong>
+                            </div>
+                            <div class="bg-paper-patina p-2 border border-industrial">
+                                <span class="text-gray-500 block">KOKPIT:</span>
+                                <strong class="text-sloboda-red font-bold">100% Analogni (0 Ekrana)</strong>
+                            </div>
+                            <div class="bg-paper-patina p-2 border border-industrial">
+                                <span class="text-gray-500 block">PROIZVODNJA:</span>
+                                <strong class="text-industrial-dark font-bold">Kombinat Split, HR</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MANIFEST SECTION -->
+    <section id="manifest" class="py-16 bg-industrial-dark text-paper-patina border-b-2 border-industrial relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-12">
+                <div class="font-mono text-sloboda-red text-sm font-bold uppercase tracking-widest">
+                    >>> SLOBODIN ANTI-DIGITALNI MANIFEST <<<
+                </div>
+                <h2 class="font-heading text-3xl sm:text-5xl font-bold uppercase tracking-wide">
+                    ZAŠTO GRADIMO AUTOMOBIL BEZ EKRANA?
+                </h2>
+                <div class="w-24 h-1 bg-sloboda-red mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm font-mono leading-relaxed">
+                <div class="bg-industrial-gray p-6 border border-gray-700 shadow-retro relative">
+                    <div class="text-sloboda-red font-heading text-4xl font-bold mb-3">01.</div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-2 uppercase">ODUZMITE IM DUGMAD</h3>
+                    <p class="text-gray-300">
+                        Moderni automobili pretvorili su se u skupe mobitele na kotačima. Zašto dodirivati ekrane od 15 inča da biste upalili klimu dok vozite 120 km/h? Mi vraćamo masivne, teške mehaničke prekidače koji kliknu s ponosom.
+                    </p>
+                </div>
+
+                <div class="bg-industrial-gray p-6 border border-gray-700 shadow-retro relative">
+                    <div class="text-sloboda-red font-heading text-4xl font-bold mb-3">02.</div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-2 uppercase">POPRAVI SAM U GARAŽI</h3>
+                    <p class="text-gray-300">
+                        Nema zaklučanog softvera, nema pretplate na grijanje sjedala. S-100 Galeb dolazi s torbom mehaničkog alata. Svaki dio je dostupan, jednostavan i napravljen da traje desetljećima, a ne do isteka garancije.
+                    </p>
+                </div>
+
+                <div class="bg-industrial-gray p-6 border border-gray-700 shadow-retro relative">
+                    <div class="text-sloboda-red font-heading text-4xl font-bold mb-3">03.</div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-2 uppercase">SPLITSKI PRKOS</h3>
+                    <p class="text-gray-300">
+                        Gradimo automobil za naš narod, naše mehanike, za radnike i vizionare. Kombinat Auto-Industrije >>SLOBODA SPLIT<< spaja dalmatinski dišpet i nepogrešivu industrijsku estetiku po pristupačnoj cijeni.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 p-6 bg-sloboda-red/10 border-2 border-sloboda-red text-center">
+                <p class="font-heading text-xl sm:text-2xl text-paper-patina uppercase tracking-wider">
+                    "AKO NE MOŽEŠ POPRAVITI SVOJ AUTO FRANCUSKIM KLJUČEM, DRŽIŠ LI GA UOPĆE U VLASNIŠTVU?"
+                </p>
+                <p class="font-mono text-xs text-sloboda-red mt-2 uppercase font-bold">— Glavni Inženjer Kombinata Sloboda</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARKETING KAMPANJA (BAČVICE) -->
+    <section id="kampanja" class="py-16 bg-paper-patina border-b-2 border-industrial">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <div class="font-mono text-sloboda-red text-xs font-bold uppercase tracking-widest">
+                        Nacionalna Reklamna Kampanja
+                    </div>
+                    <h2 class="font-heading text-3xl sm:text-5xl font-bold text-industrial-dark uppercase">
+                        LEGENDARNA KAMPANJA S BAČVICA
+                    </h2>
+                </div>
+                <p class="font-mono text-sm text-gray-700 max-w-md mt-4 md:mt-0">
+                    Otkrijte našu virala marketing priču koja je zapalila automobilsku javnost.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- CAMPAIGN POSTER DISPLAY -->
+                <div class="bg-paper-card border-2 border-industrial shadow-retro-lg p-4 relative">
+                    <div class="bg-amber-50 border-2 border-industrial p-6 text-center space-y-4">
+                        <div class="border-2 border-dashed border-sloboda-red p-2 inline-block font-heading text-xs font-bold text-sloboda-red uppercase">
+                            Službeni Plakat Kombinata #01
+                        </div>
+                        
+                        <h3 class="font-heading text-3xl sm:text-4xl font-bold text-industrial-dark uppercase tracking-tight">
+                            GALEB S-100: <br>
+                            <span class="text-sloboda-red">BRŽI OD BURE, SIGURNIJI OD BABE!</span>
+                        </h3>
+
+                        <!-- RETRO CAMPAIGN VISUAL ILLUSTRATION -->
+                        <div class="bg-gradient-to-r from-sky-300 via-amber-100 to-amber-200 border-2 border-industrial p-8 rounded-none my-4 relative overflow-hidden">
+                            <div class="text-6xl text-sloboda-red mb-2"><i class="fa-solid fa-umbrella-beach"></i></div>
+                            <p class="font-mono text-xs font-bold text-industrial-dark uppercase">Plaža Bačvice • Split • Ljeto</p>
+                            <div class="font-heading text-2xl text-industrial-dark font-bold mt-2">"LJEPO TRENUTAK S NAMA"</div>
+                            <div class="text-xs font-mono text-gray-600 mt-1">Dok moderni auti pište na cesti, Sloboda juri plićakom.</div>
+                        </div>
+
+                        <div class="font-mono text-xs text-left bg-white p-3 border border-industrial space-y-1">
+                            <div><strong>SCENA TV SPOTA:</strong> Baka u skupom električnom SUV-u stoji blokirana na cesti ("Error 404"). Iza nje izranja crveni S-100 Galeb, skreće u plićak Bačvica s mladom ekipom i nastaje opći ljetni dernek!</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CAMPAIGN TEXT DETAILS -->
+                <div class="space-y-6 font-mono text-sm">
+                    <div class="border-l-4 border-sloboda-red pl-4 space-y-2">
+                        <h4 class="font-heading text-xl font-bold text-industrial-dark uppercase">KONTRAST KOJI SVE GOVORI</h4>
+                        <p class="text-gray-700">
+                            Naša reklama nastala je iz stvarni reakcija vozača. Dok konkurenti nude automobile koji vas upozoravaju ako malo nagazite liniju ili ne gledate u ekran, S-100 Galeb vam vraća čisti osmijeh na lice.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-paper-card p-4 border border-industrial shadow-retro">
+                            <div class="text-sloboda-red font-bold text-lg mb-1"><i class="fa-solid fa-bell-slash"></i> 0% PIŠTANJA</div>
+                            <div class="text-xs text-gray-600">Nema pištalica za pojas, senzora za pritisak u gumi ni lažnih alarma.</div>
+                        </div>
+                        <div class="bg-paper-card p-4 border border-industrial shadow-retro">
+                            <div class="text-brass-dark font-bold text-lg mb-1"><i class="fa-solid fa-wrench"></i> 100% MEHANIKA</div>
+                            <div class="text-xs text-gray-600">Bimetalni mjerači temperature i goriva direktno spojeni na motore.</div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-industrial-dark text-paper-patina border border-industrial flex items-center space-x-4">
+                        <div class="text-3xl text-sloboda-red"><i class="fa-solid fa-quote-left"></i></div>
+                        <div class="text-xs italic">
+                            "Vožnja u Galebu vratila me u dane kad sam stiskao gas i osjećao cestu pod sobom, a ne softverske nadogradnje."
+                            <div class="text-sloboda-red font-bold not-italic mt-1">— Šime (62), Prvi probni vozač Osnivačke serije</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERAKTIVNI KONFIGURATOR -->
+    <section id="konfigurator" class="py-16 bg-paper-card border-b-2 border-industrial relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-3 mb-12">
+                <div class="font-mono text-sloboda-red text-xs font-bold uppercase tracking-widest">
+                    Tvornički Sklop / Konfiguracija
+                </div>
+                <h2 class="font-heading text-4xl sm:text-5xl font-bold text-industrial-dark uppercase">
+                    SLOŽI SVOJ S-100 GALEB
+                </h2>
+                <p class="font-mono text-sm text-gray-700 max-w-2xl mx-auto">
+                    Odaberi boju radničke klase, unutrašnjost i autentičnu dodatnu opremu Kombinata.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- LEFT: VISUAL PREVIEW -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="bg-paper-patina border-2 border-industrial shadow-retro-lg p-6 relative sticky top-24">
+                        <div class="flex justify-between items-center mb-4 pb-2 border-b border-industrial/20 font-mono text-xs">
+                            <span class="font-bold text-industrial-dark">MODEL: S-100 GALEB (OSNIVAČKA SERIJA)</span>
+                            <span class="text-sloboda-red font-bold" id="config-vin-preview">VIN: SLOBODA-S100-NO.042/500</span>
+                        </div>
+
+                        <!-- CAR VISUAL CANVAS CONTAINER -->
+                        <div class="relative bg-gradient-to-b from-slate-200 to-amber-100 border-2 border-industrial h-72 sm:h-96 flex items-center justify-center p-4">
+                            
+                            <!-- Dynamic SVG Vehicle -->
+                            <svg id="config-car-svg" class="w-full h-auto max-h-72 filter drop-shadow-xl transition-all duration-300" viewBox="0 0 500 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Wheels -->
+                                <circle cx="130" cy="210" r="38" fill="#1C1917"/>
+                                <circle cx="130" cy="210" r="22" fill="#D1D5DB" stroke="#1C1917" stroke-width="4"/>
+                                <circle cx="130" cy="210" r="8" fill="#1C1917"/>
+                                
+                                <circle cx="370" cy="210" r="38" fill="#1C1917"/>
+                                <circle cx="370" cy="210" r="22" fill="#D1D5DB" stroke="#1C1917" stroke-width="4"/>
+                                <circle cx="370" cy="210" r="8" fill="#1C1917"/>
+
+                                <!-- Car Main Body (Color changes dynamically) -->
+                                <path id="config-car-body-path" d="M 60 170 L 80 140 L 160 135 L 220 85 L 360 85 L 430 135 L 450 170 L 455 200 L 50 200 Z" fill="#C82323" stroke="#1C1917" stroke-width="6" stroke-linejoin="round"/>
+                                
+                                <!-- Sunroof feature line if selected -->
+                                <line id="svg-sunroof" x1="240" y1="85" x2="340" y2="85" stroke="#1C1917" stroke-width="8" class="hidden"/>
+
+                                <!-- Windows & Interior upholstery simulation -->
+                                <path d="M 170 135 L 225 93 L 285 93 L 285 135 Z" fill="#E0F2FE" stroke="#1C1917" stroke-width="4"/>
+                                <path d="M 295 135 L 295 93 L 355 93 L 415 135 Z" fill="#E0F2FE" stroke="#1C1917" stroke-width="4"/>
+                                
+                                <!-- Interior Seats preview silhouette -->
+                                <path id="svg-interior-seats" d="M 240 130 L 255 105 L 275 105 L 275 135 Z" fill="#9CA3AF"/>
+
+                                <!-- Details -->
+                                <rect x="40" y="180" width="30" height="12" rx="4" fill="#E5E7EB" stroke="#1C1917" stroke-width="3"/>
+                                <rect x="435" y="180" width="35" height="12" rx="4" fill="#E5E7EB" stroke="#1C1917" stroke-width="3"/>
+                                <circle cx="440" cy="155" r="12" fill="#FDE047" stroke="#1C1917" stroke-width="3"/>
+                                <rect x="275" y="150" width="20" height="8" rx="2" fill="#1C1917"/>
+                                <path d="M 65 170 L 445 170" stroke="#1C1917" stroke-width="3"/>
+                            </svg>
+
+                            <!-- OVERLAY ACCESSORIES BADGES -->
+                            <div class="absolute bottom-3 right-3 flex flex-col gap-1 items-end">
+                                <span id="badge-toolbag" class="hidden bg-industrial-dark text-brass-light font-mono text-[10px] px-2 py-1 border border-industrial shadow-sm">
+                                    <i class="fa-solid fa-toolbox mr-1"></i> Torba s alatom
+                                </span>
+                                <span id="badge-keychain" class="hidden bg-brass-dark text-white font-mono text-[10px] px-2 py-1 border border-industrial shadow-sm">
+                                    <i class="fa-solid fa-key mr-1"></i> Mjedeni privjesak
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- LIVE PRICING DASHBOARD -->
+                        <div class="mt-6 p-4 bg-industrial-dark text-paper-patina border border-industrial flex flex-col sm:flex-row justify-between items-center gap-4">
+                            <div>
+                                <div class="text-xs font-mono text-gray-400">UKUPNA TVORNIČKA CIJENA:</div>
+                                <div class="font-heading text-3xl font-bold text-sloboda-red" id="total-price-display">12.900 €</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-xs font-mono text-gray-400">RADNIČKA MJESEČNA RATA:</div>
+                                <div class="font-heading text-2xl font-bold text-brass-light" id="monthly-rate-display">99 € / mj</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: CONFIGURATION CONTROLS -->
+                <div class="lg:col-span-5 space-y-6">
+                    
+                    <!-- 1. BOJA EKSTERIJERA -->
+                    <div class="bg-paper-patina border-2 border-industrial p-5 shadow-retro">
+                        <label class="font-heading text-lg font-bold text-industrial-dark block uppercase mb-3 flex justify-between items-center">
+                            <span>1. Boja Karoserije</span>
+                            <span class="font-mono text-xs font-normal text-sloboda-red" id="selected-color-name">Radnička Crvena</span>
+                        </label>
+                        <div class="grid grid-cols-5 gap-3">
+                            <button onclick="selectColor('#C82323', 'Radnička Crvena')" class="h-10 border-2 border-industrial bg-[#C82323] hover:scale-105 transition-transform relative focus:ring-2 focus:ring-sloboda-red" title="Radnička Crvena"></button>
+                            <button onclick="selectColor('#1E40AF', 'Splitska Plava')" class="h-10 border-2 border-industrial bg-[#1E40AF] hover:scale-105 transition-transform relative focus:ring-2 focus:ring-sloboda-red" title="Splitska Plava"></button>
+                            <button onclick="selectColor('#3F6212', 'Maslinasto Zelena')" class="h-10 border-2 border-industrial bg-[#3F6212] hover:scale-105 transition-transform relative focus:ring-2 focus:ring-sloboda-red" title="Maslinasto Zelena"></button>
+                            <button onclick="selectColor('#374151', 'Tamno Siva')" class="h-10 border-2 border-industrial bg-[#374151] hover:scale-105 transition-transform relative focus:ring-2 focus:ring-sloboda-red" title="Tamno Siva"></button>
+                            <button onclick="selectColor('#F3F4F6', 'Biokovo Bijela')" class="h-10 border-2 border-industrial bg-[#F3F4F6] hover:scale-105 transition-transform relative focus:ring-2 focus:ring-sloboda-red" title="Biokovo Bijela"></button>
+                        </div>
+                    </div>
+
+                    <!-- 2. UNUTRAŠNJOST / PRESVLAKE -->
+                    <div class="bg-paper-patina border-2 border-industrial p-5 shadow-retro">
+                        <label class="font-heading text-lg font-bold text-industrial-dark block uppercase mb-3">
+                            2. Presvlake Sjedala
+                        </label>
+                        <div class="space-y-2 font-mono text-xs">
+                            <label class="flex items-center justify-between p-3 border border-industrial bg-white cursor-pointer hover:bg-amber-50">
+                                <div class="flex items-center space-x-2">
+                                    <input type="radio" name="upholstery" value="0" checked onclick="selectInterior('#9CA3AF', 0)" class="accent-sloboda-red">
+                                    <span>Standardno Radničko Platno (Sivo)</span>
+                                </div>
+                                <span class="font-bold text-gray-500">+0 €</span>
+                            </label>
+                            <label class="flex items-center justify-between p-3 border border-industrial bg-white cursor-pointer hover:bg-amber-50">
+                                <div class="flex items-center space-x-2">
+                                    <input type="radio" name="upholstery" value="250" onclick="selectInterior('#78350F', 250)" class="accent-sloboda-red">
+                                    <span>Retro Smeđa Umjetna Koža</span>
+                                </div>
+                                <span class="font-bold text-sloboda-red">+250 €</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 3. DODATNA AUTENTIČNA OPREMA -->
+                    <div class="bg-paper-patina border-2 border-industrial p-5 shadow-retro">
+                        <label class="font-heading text-lg font-bold text-industrial-dark block uppercase mb-3">
+                            3. Oprema Kombinata
+                        </label>
+                        <div class="space-y-2 font-mono text-xs">
+                            <label class="flex items-center justify-between p-3 border border-industrial bg-white cursor-pointer hover:bg-amber-50">
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="opt-lighter" value="50" onchange="updateOptions()" class="accent-sloboda-red" checked>
+                                    <span>Analogni upaljač + kromirana pepeljara</span>
+                                </div>
+                                <span class="font-bold text-sloboda-red">+50 €</span>
+                            </label>
+
+                            <label class="flex items-center justify-between p-3 border border-industrial bg-white cursor-pointer hover:bg-amber-50">
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="opt-toolbag" value="180" onchange="updateOptions()" class="accent-sloboda-red" checked>
+                                    <span>Tvornička kožna torba s mehaničkim alatom</span>
+                                </div>
+                                <span class="font-bold text-sloboda-red">+180 €</span>
+                            </label>
+
+                            <label class="flex items-center justify-between p-3 border border-industrial bg-white cursor-pointer hover:bg-amber-50">
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="opt-sunroof" value="350" onchange="updateOptions()" class="accent-sloboda-red">
+                                    <span>Mehanički šiber / platneni krov za ljeto</span>
+                                </div>
+                                <span class="font-bold text-sloboda-red">+350 €</span>
+                            </label>
+
+                            <label class="flex items-center justify-between p-3 border border-industrial bg-white cursor-pointer hover:bg-amber-50">
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="opt-keychain" value="40" onchange="updateOptions()" class="accent-sloboda-red" checked>
+                                    <span>Mjedeni privjesak s graviranim brojem šasije</span>
+                                </div>
+                                <span class="font-bold text-sloboda-red">+40 €</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- CTA BUTTON TO PRE-ORDER FORM -->
+                    <a href="#rezervacija-forma" class="block w-full bg-sloboda-red hover:bg-sloboda-red-dark text-white font-heading text-xl py-4 border-2 border-industrial shadow-retro text-center uppercase tracking-wider transition-all">
+                        ZAVRŠI KONFIGURACIJU I REZERVIRAJ <i class="fa-solid fa-arrow-down ml-2"></i>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM SECTION: OSNIVAČKA SERIJA REZERVACIJA -->
+    <section id="rezervacija-forma" class="py-16 bg-paper-patina border-b-2 border-industrial">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="bg-paper-card border-2 border-industrial p-6 sm:p-10 shadow-retro-lg relative">
+                
+                <!-- BADGE -->
+                <div class="absolute -top-5 right-6 bg-brass-dark text-white font-heading px-4 py-1 text-xs uppercase tracking-widest border border-industrial shadow-sm">
+                    PRVIH 500 OSNIVAČA
+                </div>
+
+                <div class="text-center space-y-2 mb-8">
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-industrial-dark uppercase">
+                        PREDBILJEŽBA ZA OSNIVAČKU SERIJU
+                    </h2>
+                    <p class="font-mono text-xs text-gray-700">
+                        Uplatom povratne kapare od <strong class="text-sloboda-red">300 €</strong> osiguravate svoj redni broj šasije i tvornički certifikat.
+                    </p>
+                </div>
+
+                <form id="preorder-form" onsubmit="submitReservation(event)" class="space-y-6 font-mono text-xs">
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block font-bold text-industrial-dark mb-1 uppercase">Ime i Prezime *</label>
+                            <input type="text" required placeholder="npr. Ante Matić" class="w-full p-3 border-2 border-industrial bg-white text-industrial-dark focus:outline-none focus:ring-2 focus:ring-sloboda-red">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-industrial-dark mb-1 uppercase">E-mail Adresa *</label>
+                            <input type="email" required placeholder="ante.matic@email.hr" class="w-full p-3 border-2 border-industrial bg-white text-industrial-dark focus:outline-none focus:ring-2 focus:ring-sloboda-red">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block font-bold text-industrial-dark mb-1 uppercase">Broj Mobitela *</label>
+                            <input type="tel" required placeholder="+385 91 234 5678" class="w-full p-3 border-2 border-industrial bg-white text-industrial-dark focus:outline-none focus:ring-2 focus:ring-sloboda-red">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-industrial-dark mb-1 uppercase">Grad / Adresa Dostave *</label>
+                            <input type="text" required placeholder="Split, Domovinskog rata 12" class="w-full p-3 border-2 border-industrial bg-white text-industrial-dark focus:outline-none focus:ring-2 focus:ring-sloboda-red">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block font-bold text-industrial-dark mb-1 uppercase">Način Preuzimanja Vozila *</label>
+                        <select class="w-full p-3 border-2 border-industrial bg-white text-industrial-dark focus:outline-none focus:ring-2 focus:ring-sloboda-red">
+                            <option value="factory">Svečano preuzimanje u Tvornici Kombinata (Split) - Besplatno</option>
+                            <option value="home">Dostava specijalnim kamionom na kućnu adresu (+150 €)</option>
+                        </select>
+                    </div>
+
+                    <!-- SUMMARY RECAP -->
+                    <div class="p-4 bg-paper-patina border border-industrial space-y-2">
+                        <div class="flex justify-between font-bold">
+                            <span>ODABRANA KONFIGURACIJA:</span>
+                            <span id="form-color-summary" class="text-sloboda-red">Radnička Crvena</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>UKUPNA CIJENA VOZILA:</span>
+                            <span id="form-price-summary" class="font-bold">13.170 €</span>
+                        </div>
+                        <div class="flex justify-between text-sloboda-red font-bold text-sm pt-2 border-t border-industrial/20">
+                            <span>IZNOS ZA UPLATU REZERVACIJE:</span>
+                            <span>300 € (Povratno)</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-2">
+                        <input type="checkbox" required id="terms" class="mt-1 accent-sloboda-red">
+                        <label for="terms" class="text-[11px] text-gray-600">
+                            Potvrđujem točnost podataka i prihvaćam opće uvjete predbilježbe Kombinata Auto-Industrije >>SLOBODA SPLIT<< d.o.o. Kapara je u potpunosti povratna u roku od 30 dana.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="w-full bg-sloboda-red hover:bg-sloboda-red-dark text-white font-heading text-xl py-4 border-2 border-industrial shadow-retro uppercase tracking-wider transition-all">
+                        POTVRDI REZERVACIJU (300 €) <i class="fa-solid fa-check-double ml-2"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TEHNIČKE SPECIFIKACIJE -->
+    <section id="specifikacije" class="py-16 bg-industrial-dark text-paper-patina border-b-2 border-industrial">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-3 mb-12">
+                <div class="font-mono text-brass-light text-xs font-bold uppercase tracking-widest">
+                    Tehnički List Kombinata
+                </div>
+                <h2 class="font-heading text-3xl sm:text-5xl font-bold uppercase">
+                    SPECIFIKACIJE MODELA S-100 GALEB
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 font-mono text-xs">
+                
+                <div class="bg-industrial-gray p-5 border border-gray-700 shadow-retro space-y-3">
+                    <div class="text-sloboda-red font-bold text-sm border-b border-gray-700 pb-2 uppercase">
+                        <i class="fa-solid fa-engine-warning mr-1"></i> MOTOR & POGON
+                    </div>
+                    <div><strong>Tip:</strong> 4-cilindrični atmosferac</div>
+                    <div><strong>Obujam:</strong> 1116 cm³</div>
+                    <div><strong>Snaga:</strong> 55 KS pri 6000 o/min</div>
+                    <div><strong>Gorivo:</strong> Benzin (Eurosuper 95)</div>
+                    <div><strong>Mjenjač:</strong> 5-stupanjski ručni</div>
+                </div>
+
+                <div class="bg-industrial-gray p-5 border border-gray-700 shadow-retro space-y-3">
+                    <div class="text-brass-light font-bold text-sm border-b border-gray-700 pb-2 uppercase">
+                        <i class="fa-solid fa-ruler-combined mr-1"></i> DIMENZIJE & TEŽINA
+                    </div>
+                    <div><strong>Duljina:</strong> 3790 mm</div>
+                    <div><strong>Širina:</strong> 1590 mm</div>
+                    <div><strong>Visina:</strong> 1340 mm</div>
+                    <div><strong>Masa:</strong> 820 kg (Izuzetno lagan!)</div>
+                    <div><strong>Prtljažnik:</strong> 325 Litara</div>
+                </div>
+
+                <div class="bg-industrial-gray p-5 border border-gray-700 shadow-retro space-y-3">
+                    <div class="text-sloboda-blue-light font-bold text-sm border-b border-gray-700 pb-2 uppercase">
+                        <i class="fa-solid fa-gauge-high mr-1"></i> KOKPIT & OPREMA
+                    </div>
+                    <div><strong>Instrumenti:</strong> Bimetalni indikatori</div>
+                    <div><strong>Ekrani:</strong> 0 cm (Apsolutno bez ekrana)</div>
+                    <div><strong>Klima:</strong> Mehanički usis zraka</div>
+                    <div><strong>Upravljač:</strong> Trokraki bez tipki</div>
+                    <div><strong>Audio:</strong> Priprema za retro radio</div>
+                </div>
+
+                <div class="bg-industrial-gray p-5 border border-gray-700 shadow-retro space-y-3">
+                    <div class="text-green-400 font-bold text-sm border-b border-gray-700 pb-2 uppercase">
+                        <i class="fa-solid fa-coins mr-1"></i> TROŠKOVI & ODRŽAVANJE
+                    </div>
+                    <div><strong>Prosječna potrošnja:</strong> 5.8 L / 100 km</div>
+                    <div><strong>Servisni interval:</strong> 15.000 km ili 1 god.</div>
+                    <div><strong>Mali servis cijena:</strong> ~45 € (Filtr. + Ulje)</div>
+                    <div><strong>Garancija:</strong> 3 Godine Mehanička</div>
+                    <div><strong>Porez na emisije:</strong> Euro 6d compliant</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-industrial-dark text-paper-patina py-12 border-t-4 border-sloboda-red font-mono text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="font-heading text-xl font-bold text-white mb-2">
+                        KOMBINAT AUTO-INDUSTRIJE >>SLOBODA SPLIT<< d.o.o.
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Prva dalmatinska tvornica analognih vozila. Vraćamo slobodu vožnje, ponos radničke mehanike i jednostavnost na ceste.
+                    </p>
+                </div>
+                <div>
+                    <div class="font-heading text-lg font-bold text-brass-light mb-2 uppercase">
+                        Glavni Dom Kombinata
+                    </div>
+                    <div class="text-gray-300 space-y-1">
+                        <div>Industrijska Zona Solin / Split</div>
+                        <div>Put Kopilice 14, 21000 Split, HR</div>
+                        <div>E-mail: prodaja@sloboda-split.hr</div>
+                        <div>Tel: +385 (0)21 888 999</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="font-heading text-lg font-bold text-sloboda-red mb-2 uppercase">
+                        Radno Vrijeme & Probne Vožnje
+                    </div>
+                    <div class="text-gray-300 space-y-1">
+                        <div>Ponedjeljak – Petak: 07:00 – 17:00</div>
+                        <div>Subota (Radionica): 08:00 – 13:00</div>
+                        <div>Nedjeljom i blagdanom: Vozimo po obali!</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 flex flex-col sm:flex-row justify-between items-center text-gray-500">
+                <div>© 2026 KOMBINAT AUTO-INDUSTRIJE >>SLOBODA SPLIT<< d.o.o. Sva prava pridržana.</div>
+                <div class="mt-2 sm:mt-0 space-x-4">
+                    <span>Sve cijene uključuju PDV</span>
+                    <span>•</span>
+                    <span>Proizvedeno u Splitu</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL POTVRDE REZERVACIJE -->
+    <div id="reservation-modal" class="fixed inset-0 bg-industrial-dark/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-paper-patina border-4 border-industrial shadow-retro-lg max-w-xl w-full p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto">
+            
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-industrial-dark hover:text-sloboda-red font-bold text-2xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="text-center space-y-3 mb-6">
+                <div class="w-16 h-16 bg-sloboda-red text-white mx-auto flex items-center justify-center rounded-full text-3xl border-2 border-industrial shadow-retro">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3 class="font-heading text-3xl font-bold text-industrial-dark uppercase">
+                    REZERVACIJA USPJEŠNO ZAPRIMLJENA!
+                </h3>
+                <p class="font-mono text-xs text-sloboda-red font-bold uppercase">
+                    Čestitamo! Postali ste službeni osnivač Kombinata Sloboda.
+                </p>
+            </div>
+
+            <!-- CERTIFICATE DISPLAY -->
+            <div class="bg-amber-50 border-2 border-dashed border-industrial p-6 my-4 font-mono text-xs space-y-3 relative">
+                <div class="text-center border-b border-industrial/30 pb-2">
+                    <div class="font-heading text-lg font-bold">DIGITALNI CERTIFIKAT OSNIVAČA</div>
+                    <div class="text-[10px] text-gray-500">SERIJA 00 / FIRST EDITION</div>
+                </div>
+
+                <div class="flex justify-between">
+                    <span>NOSITELJ CERTIFIKATA:</span>
+                    <strong id="modal-customer-name" class="text-industrial-dark">Ante Matić</strong>
+                </div>
+                <div class="flex justify-between">
+                    <span>DODIJELJENI BROJ ŠASIJE:</span>
+                    <strong id="modal-vin" class="text-sloboda-red font-bold">SLOBODA-S100-NO.042/500</strong>
+                </div>
+                <div class="flex justify-between">
+                    <span>MODEL VOZILA:</span>
+                    <strong>S-100 GALEB</strong>
+                </div>
+                <div class="flex justify-between">
+                    <span>UPLAĆENA KAPARA:</span>
+                    <strong class="text-green-700">300,00 € (Potvrđeno)</strong>
+                </div>
+
+                <div class="pt-3 border-t border-industrial/30 text-[10px] text-gray-600 italic">
+                    Upute za uplatu i tvornička potvrda poslane su na vašu e-mail adresu. Vaš automobil prelazi u fazu pripreme za sklapanje u Splitu!
+                </div>
+            </div>
+
+            <button onclick="closeModal()" class="w-full bg-industrial-dark hover:bg-industrial-gray text-paper-patina font-heading text-lg py-3 border-2 border-industrial shadow-retro uppercase transition-all">
+                ZATVORI I PREUZMI CERTIFIKAT
+            </button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT ZA KONFIGURATOR I MODAL -->
+    <script>
+        // State variables
+        let basePrice = 12900;
+        let selectedColorHex = '#C82323';
+        let selectedColorName = 'Radnička Crvena';
+        let interiorPrice = 0;
+        let interiorColor = '#9CA3AF';
+        let currentVin = 'SLOBODA-S100-NO.' + String(Math.floor(Math.random() * 400) + 1).padStart(3, '0') + '/500';
+
+        // Initialize display
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('config-vin-preview').innerText = 'VIN: ' + currentVin;
+            calculateTotal();
+        });
+
+        // Color selection handler
+        function selectColor(hex, name) {
+            selectedColorHex = hex;
+            selectedColorName = name;
+            
+            // Update SVG Car Body color
+            document.getElementById('config-car-body-path').setAttribute('fill', hex);
+            document.getElementById('hero-car-body').setAttribute('fill', hex);
+            
+            // Update Text
+            document.getElementById('selected-color-name').innerText = name;
+            document.getElementById('form-color-summary').innerText = name;
+        }
+
+        // Interior selection handler
+        function selectInterior(colorHex, price) {
+            interiorPrice = price;
+            document.getElementById('svg-interior-seats').setAttribute('fill', colorHex);
+            calculateTotal();
+        }
+
+        // Checkbox options handler
+        function updateOptions() {
+            let optionsSum = 0;
+            
+            const lighter = document.getElementById('opt-lighter');
+            const toolbag = document.getElementById('opt-toolbag');
+            const sunroof = document.getElementById('opt-sunroof');
+            const keychain = document.getElementById('opt-keychain');
+
+            if (lighter && lighter.checked) optionsSum += parseInt(lighter.value);
+            
+            if (toolbag && toolbag.checked) {
+                optionsSum += parseInt(toolbag.value);
+                document.getElementById('badge-toolbag').classList.remove('hidden');
+            } else {
+                document.getElementById('badge-toolbag').classList.add('hidden');
+            }
+
+            if (sunroof && sunroof.checked) {
+                optionsSum += parseInt(sunroof.value);
+                document.getElementById('svg-sunroof').classList.remove('hidden');
+            } else {
+                document.getElementById('svg-sunroof').classList.add('hidden');
+            }
+
+            if (keychain && keychain.checked) {
+                optionsSum += parseInt(keychain.value);
+                document.getElementById('badge-keychain').classList.remove('hidden');
+            } else {
+                document.getElementById('badge-keychain').classList.add('hidden');
+            }
+
+            calculateTotal(optionsSum);
+        }
+
+        // Total pricing calculation
+        function calculateTotal(optionsSum = null) {
+            if (optionsSum === null) {
+                optionsSum = 0;
+                if (document.getElementById('opt-lighter')?.checked) optionsSum += 50;
+                if (document.getElementById('opt-toolbag')?.checked) optionsSum += 180;
+                if (document.getElementById('opt-sunroof')?.checked) optionsSum += 350;
+                if (document.getElementById('opt-keychain')?.checked) optionsSum += 40;
+            }
+
+            const total = basePrice + interiorPrice + optionsSum;
+            
+            // Radnička mjesečna rata (npr. 48 mjeseci uz učešće)
+            const monthlyRate = Math.round((total - 3000) / 96);
+
+            // Update UI Displays
+            document.getElementById('total-price-display').innerText = total.toLocaleString('hr-HR') + ' €';
+            document.getElementById('monthly-rate-display').innerText = monthlyRate + ' € / mj';
+            document.getElementById('form-price-summary').innerText = total.toLocaleString('hr-HR') + ' €';
+        }
+
+        // Submit Reservation Handler
+        function submitReservation(e) {
+            e.preventDefault();
+            
+            const nameInput = e.target.querySelector('input[type="text"]').value;
+            
+            document.getElementById('modal-customer-name').innerText = nameInput;
+            document.getElementById('modal-vin').innerText = currentVin;
+            
+            // Show Modal
+            document.getElementById('reservation-modal').classList.remove('hidden');
+        }
+
+        // Close Modal Handler
+        function closeModal() {
+            document.getElementById('reservation-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
